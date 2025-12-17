@@ -1,8 +1,5 @@
-import axiosInstance, {
-  type AxiosError,
-  type AxiosRequestConfig,
-  type AxiosResponseHeaders,
-} from 'axios'
+import axiosInstance from 'axios'
+import type {AxiosError, AxiosRequestConfig, AxiosResponseHeaders} from 'axios';
 
 const VITE_API_URL = import.meta.env.VITE_API_URL
 

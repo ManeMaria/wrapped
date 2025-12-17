@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { QueryClientProvider } from '@tanstack/react-query'
 
-import { queryClient } from '@/lib'
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
 import reportWebVitals from './reportWebVitals.ts'
+import { queryClient } from '@/lib'
 import './styles/global.css'
 
 // Create a new router instance

@@ -1,8 +1,7 @@
 import {
-  type DefaultOptions,
-  QueryClient,
-  type UseQueryOptions,
+  QueryClient
 } from '@tanstack/react-query'
+import type { DefaultOptions, UseQueryOptions } from '@tanstack/react-query';
 
 const queryConfig: DefaultOptions = {
   queries: {
@@ -13,5 +12,5 @@ const queryConfig: DefaultOptions = {
 
 export const queryClient = new QueryClient({ defaultOptions: queryConfig })
 
-export type QueryConfig<FetcherFnType extends (...args: unknown[]) => unknown> =
+export type QueryConfig<FetcherFnType extends (...args: Array<unknown>) => unknown> =
   UseQueryOptions<Awaited<ReturnType<FetcherFnType>>>

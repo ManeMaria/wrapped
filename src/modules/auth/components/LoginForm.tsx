@@ -1,11 +1,9 @@
-import { loginSchema, type LoginFormType } from '@/modules/auth/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
-import {
-  useForm,
-  type FieldErrors,
-  type UseFormRegister,
-} from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Loader2 } from 'lucide-react'
+import type { FieldErrors, UseFormRegister } from 'react-hook-form';
+import type { LoginFormType } from '@/modules/auth/utils';
+import { loginSchema } from '@/modules/auth/utils'
 
 type LoginFormProps = {
   onSubmit: (data: LoginFormType) => void
