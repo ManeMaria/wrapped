@@ -1,5 +1,5 @@
 import axiosInstance from 'axios'
-import type {AxiosError, AxiosRequestConfig, AxiosResponseHeaders} from 'axios';
+import type { AxiosError, AxiosRequestConfig, AxiosResponseHeaders } from 'axios';
 
 const VITE_API_URL = import.meta.env.VITE_API_URL
 
@@ -37,9 +37,6 @@ export const axiosProvider = {
     return unathenticatedInstance
   },
   authorized() {
-    // authenticatedInstance.defaults.headers.common.Authorization = `Bearer ${cookies.getAccess() as string
-    //   }`;
-
     authenticatedInstance.interceptors.request.use(
       function (newConfig) {
         newConfig.baseURL = VITE_API_URL
