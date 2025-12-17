@@ -1,0 +1,105 @@
+.border-effect {
+  position: relative;
+  --border-size-left-right: 11px;
+  --border-size-top-bottom: 25px;
+  --scroll-speed: 7.5s;
+}
+
+.border-effect-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--border-size-top-bottom);
+  background: url("/assets/images/bordasuperior.png");
+  background-size: cover;
+  animation: border-scroll-top var(--scroll-speed) linear infinite;
+}
+
+.border-effect-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--border-size-top-bottom);
+  background: url("/assets/images/bordainferior.png");
+  background-size: cover;
+  animation: border-scroll-bottom var(--scroll-speed) linear infinite;
+}
+
+.border-effect-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--border-size-left-right);
+  height: 100dvh;
+  background: url("/assets/images/border-side.svg") 20px round repeat;
+  animation: border-scroll-left var(--scroll-speed) linear infinite;
+
+}
+
+.border-effect-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--border-size-left-right);
+  height: 100dvh;
+  background: url("/assets/images/border-side.svg") 20px round repeat;
+  animation: border-scroll-right var(--scroll-speed) linear infinite;
+}
+
+@keyframes border-scroll-right {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 0 -360px;
+  }
+
+  100% {
+    background-position: 0 -720px;
+  }
+}
+
+@keyframes border-scroll-left {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 0 360px;
+  }
+
+  100% {
+    background-position: 0 720px;
+  }
+}
+
+@keyframes border-scroll-top {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: calc(var(--border-size-left-right) - 360px);
+  }
+
+  100% {
+    background-position: calc(var(--border-size-left-right) - 720px);
+  }
+}
+
+@keyframes border-scroll-bottom {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: calc(360px - var(--border-size-left-right));
+  }
+
+  100% {
+    background-position: calc(720px - var(--border-size-left-right));
+  }
+}

@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import 'animate.css';
 @import './fonts.css';
+@import './typing.css';
+@import './border.css';
+@import './curtain.css';
+
 
 @theme {
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
@@ -12,6 +16,7 @@
 :root {
   --submit-button-color: #851c98;
   --input-color: rgb(85, 79, 79);
+  --background-color-global: #FF9DB1;
 }
 
 @layer base {

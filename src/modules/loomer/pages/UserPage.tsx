@@ -1,4 +1,5 @@
-import { useGetUser } from '../queries';
+import { Border, Curtain } from '@/components';
+import { useGetUser } from '@/modules/loomer/queries';
 
 export const UserPage = () => {
   const { data: user, isLoading } = useGetUser({
@@ -7,8 +8,12 @@ export const UserPage = () => {
   console.log("🚀 ~ UserPage ~ user:", user)
 
   return (
-    <div className="grid place-items-center h-screen px-6">
-      <div>User</div>
-    </div>
+    <Curtain>
+      <Border>
+        <div className="grid place-items-center h-screen px-6">
+          <div>User</div>
+        </div>
+      </Border>
+    </Curtain>
   )
 }

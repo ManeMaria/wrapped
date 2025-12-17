@@ -1,0 +1,48 @@
+.curtain-effect {
+  position: relative;
+  --curtain-size: 100%;
+  --curtain-position: 0;
+  --curtain-speed: 1s;
+}
+
+.curtain-effect-left {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  background: url("/assets/images/cortina.webp") no-repeat center right;
+  background-size: cover;
+  will-change: transform;
+  animation: curtain-into-left 2s ease-in-out forwards;
+}
+
+.curtain-effect-right {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: url("/assets/images/cortina.webp") no-repeat left center;
+  background-size: cover;
+  will-change: transform;
+  animation: curtain-into-right 2s ease-in-out forwards;
+}
+
+@keyframes curtain-into-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(110%);
+  }
+}
+
+/* começa normal, termina totalmente fora pela esquerda */
+@keyframes curtain-into-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-110%);
+  }
+
+}

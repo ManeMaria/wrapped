@@ -28,9 +28,9 @@ const InputForm = ({
   return (
     <label
       htmlFor={label}
-      className="w-full animate__animated animate__fadeInDown animate__delay-2s"
+      className="w-full animate__animated animate__fadeInDown animate__delay-1s"
     >
-      <p className="text-sm font-medium mb-1">{label}</p>
+      <p className="text-sm font-medium mb-1 ">{label}</p>
       <input
         type={type}
         {...register(type)}
@@ -63,13 +63,13 @@ export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
       onSubmit={handleSubmit(handleSubmitForm)}
       className="grid place-items-center gap-8 w-full max-w-[400px]"
     >
-      <span className="grid gap-4 animate__animated animate__fadeInDown animate__delay-1s">
+      <span className="grid gap-4">
         <img
           src="/assets/images/loomi.png"
           alt="Wrapped 2025"
-          className="max-w-[230px] mx-auto"
+          className="max-w-[230px] mx-auto animate__animated animate__fadeInDown animate__delay-1s"
         />
-        <h1>Wrapped 2025</h1>
+        <h1 className="typing-effect typing-animated">Wrapped 2025</h1>
       </span>
       <InputForm
         label="E-mail Loomi"
@@ -88,7 +88,7 @@ export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
 
       <button
         type="submit"
-        className="button-submit w-full grid place-items-center animate__animated animate__fadeInDown animate__delay-3s"
+        className="button-submit w-full grid place-items-center animate__animated animate__fadeInDown animate__delay-1s"
         disabled={isPending}
       >
         {isPending ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Entrar'}
