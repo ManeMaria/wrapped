@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import 'animate.css';
+@import "./fonts.css";
+
+
+@theme {
+  --font-sans: "Xilosa", ui-sans-serif, system-ui;
+  --font-display: "Xilosa", ui-sans-serif, system-ui;
+  --font-plus-jakarta-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  --background-image-app: url('/assets/images/global_background_min.webp');
+}
+
+:root {
+  --submit-button-color: #851C98;
+  --input-color: rgb(85, 79, 79);
+}
+
+@layer base {
+  html {
+    font-family: "Xilosa", ui-sans-serif, system-ui;
+  }
+
+  body {
+    @apply m-0;
+    font-family: "Xilosa", ui-sans-serif, system-ui;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-snug tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold uppercase tracking-wide;
+  }
+
+  p {
+    @apply text-sm font-medium;
+    font-family: var(--font-plus-jakarta-sans);
+  }
+
+  input {
+    @apply text-sm font-medium;
+    font-family: var(--font-plus-jakarta-sans);
+    color: var(--input-color);
+    font-weight: 300;
+  }
+
+}
+
+.button-submit {
+  background-color: var(--submit-button-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.input-form {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+}
