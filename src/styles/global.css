@@ -1,28 +1,27 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import 'animate.css';
-@import "./fonts.css";
-
+@import './fonts.css';
 
 @theme {
-  --font-sans: "Xilosa", ui-sans-serif, system-ui;
-  --font-display: "Xilosa", ui-sans-serif, system-ui;
-  --font-plus-jakarta-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  --font-sans: 'Xilosa', ui-sans-serif, system-ui;
+  --font-display: 'Xilosa', ui-sans-serif, system-ui;
+  --font-plus-jakarta-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
   --background-image-app: url('/assets/images/global_background_min.webp');
 }
 
 :root {
-  --submit-button-color: #851C98;
+  --submit-button-color: #851c98;
   --input-color: rgb(85, 79, 79);
 }
 
 @layer base {
   html {
-    font-family: "Xilosa", ui-sans-serif, system-ui;
+    font-family: 'Xilosa', ui-sans-serif, system-ui;
   }
 
   body {
     @apply m-0;
-    font-family: "Xilosa", ui-sans-serif, system-ui;
+    font-family: 'Xilosa', ui-sans-serif, system-ui;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -66,7 +65,6 @@
     color: var(--input-color);
     font-weight: 300;
   }
-
 }
 
 .button-submit {
@@ -78,7 +76,6 @@
   border: none;
   font-size: 16px;
   font-weight: 600;
-
 }
 
 .input-form {

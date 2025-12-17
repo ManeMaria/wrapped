@@ -1,54 +1,98 @@
-import { loginSchema, type LoginFormType } from "@/modules/auth/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, type FieldErrors, type UseFormRegister } from "react-hook-form";
-import { Loader2 } from "lucide-react";
+import { loginSchema, type LoginFormType } from '@/modules/auth/utils'
+import { zodResolver } from '@hookform/resolvers/zod'
+import {
+  useForm,
+  type FieldErrors,
+  type UseFormRegister,
+} from 'react-hook-form'
+import { Loader2 } from 'lucide-react'
 
 type LoginFormProps = {
-  onSubmit: (data: LoginFormType) => void;
-  isPending: boolean;
-};
+  onSubmit: (data: LoginFormType) => void
+  isPending: boolean
+}
 
 type InputFormProps = {
-  label: string,
-  type: 'email' | 'password',
-  register: UseFormRegister<LoginFormType>,
-  errors: FieldErrors<LoginFormType>,
+  label: string
+  type: 'email' | 'password'
+  register: UseFormRegister<LoginFormType>
+  errors: FieldErrors<LoginFormType>
   placeholder: string
-};
+}
 
-const InputForm = ({ label, type, register, errors, placeholder }: InputFormProps) => {
+const InputForm = ({
+  label,
+  type,
+  register,
+  errors,
+  placeholder,
+}: InputFormProps) => {
   return (
-    <label htmlFor={label} className="w-full animate__animated animate__fadeInDown animate__delay-2s">
+    <label
+      htmlFor={label}
+      className="w-full animate__animated animate__fadeInDown animate__delay-2s"
+    >
       <p className="text-sm font-medium mb-1">{label}</p>
-      <input type={type} {...register(type)} className="input-form focus:outline-none" placeholder={placeholder} />
-      {errors[type] && <p className="text-black text-sm ml-2 mt-1">{errors[type]?.message}</p>}
+      <input
+        type={type}
+        {...register(type)}
+        className="input-form focus:outline-none"
+        placeholder={placeholder}
+      />
+      {errors[type] && (
+        <p className="text-black text-sm ml-2 mt-1">{errors[type]?.message}</p>
+      )}
     </label>
   )
 }
 
 export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
-  const { register, handleSubmit, formState: { errors } } = useForm<LoginFormType>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormType>({
     resolver: zodResolver(loginSchema),
     mode: 'onSubmit',
-  });
+  })
 
   const handleSubmitForm = (data: LoginFormType) => {
-    onSubmit(data);
+    onSubmit(data)
   }
 
   return (
-    <form onSubmit={handleSubmit(handleSubmitForm)} className="grid place-items-center gap-8 w-full max-w-[400px]">
+    <form
+      onSubmit={handleSubmit(handleSubmitForm)}
+      className="grid place-items-center gap-8 w-full max-w-[400px]"
+    >
       <span className="grid gap-4 animate__animated animate__fadeInDown animate__delay-1s">
-        <img src="/assets/images/loomi.png" alt="Wrapped 2025" className="max-w-[230px] mx-auto" />
+        <img
+          src="/assets/images/loomi.png"
+          alt="Wrapped 2025"
+          className="max-w-[230px] mx-auto"
+        />
         <h1>Wrapped 2025</h1>
       </span>
-      <InputForm label="E-mail Loomi" type="email" register={register} errors={errors} placeholder="E-mail Loomi" />
-      <InputForm label="Data de nascimento" type="password" register={register} errors={errors} placeholder="Data de nascimento (DDMMYYYY)" />
+      <InputForm
+        label="E-mail Loomi"
+        type="email"
+        register={register}
+        errors={errors}
+        placeholder="E-mail Loomi"
+      />
+      <InputForm
+        label="Data de nascimento"
+        type="password"
+        register={register}
+        errors={errors}
+        placeholder="Data de nascimento (DDMMYYYY)"
+      />
 
       <button
         type="submit"
         className="button-submit w-full grid place-items-center animate__animated animate__fadeInDown animate__delay-3s"
-        disabled={isPending}>
+        disabled={isPending}
+      >
         {isPending ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Entrar'}
       </button>
     </form>

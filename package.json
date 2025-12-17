@@ -9,7 +9,7 @@
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "style:check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

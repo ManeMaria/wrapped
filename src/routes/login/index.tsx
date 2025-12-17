@@ -4,5 +4,3 @@ import { LoginPage } from '@/modules/auth/pages'
 export const Route = createFileRoute('/login/')({
   component: LoginPage,
 })
-
-
