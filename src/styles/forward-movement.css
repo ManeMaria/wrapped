@@ -1,5 +1,4 @@
 @keyframes forward-movement {
-
   0%,
   100% {
     transform: translateX(-5px);
@@ -12,5 +11,4 @@
 
 .forward-movement {
   animation: forward-movement 3s ease-in-out infinite;
-
 }

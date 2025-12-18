@@ -1,15 +1,12 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Loader2 } from 'lucide-react'
-import type { FieldErrors, UseFormRegister } from 'react-hook-form';
-import type { LoginFormType } from '@/modules/auth/utils';
+import type { FieldErrors, UseFormRegister } from 'react-hook-form'
+import type { LoginFormType } from '@/modules/auth/utils'
 import { loginSchema } from '@/modules/auth/utils'
 
 type LoginFormProps = {
-  onSubmit: (data: {
-    password: string;
-    email: string;
-  }) => void
+  onSubmit: (data: { password: string; email: string }) => void
   isPending: boolean
 }
 
@@ -41,7 +38,9 @@ const InputForm = ({
         placeholder={placeholder}
       />
       {errors[type] && (
-        <p className="text-black text-sm ml-2 mt-1">{errors[type]?.message ?? ''}</p>
+        <p className="text-black text-sm ml-2 mt-1">
+          {errors[type]?.message ?? ''}
+        </p>
       )}
     </label>
   )
@@ -60,7 +59,7 @@ export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
   const handleSubmitForm = (data: LoginFormType) => {
     onSubmit({
       email: data.email,
-      password: data.birthDate
+      password: data.birthDate,
     })
   }
 

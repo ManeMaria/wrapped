@@ -9,7 +9,7 @@
   z-index: 1;
   position: absolute;
   inset: 0;
-  background: url("/assets/images/cortina.webp") no-repeat center right;
+  background: url('/assets/images/cortina.webp') no-repeat center right;
   background-size: cover;
 }
 
@@ -17,9 +17,8 @@
   z-index: 2;
   position: absolute;
   inset: 0;
-  background: url("/assets/images/cortina.webp") no-repeat left center;
+  background: url('/assets/images/cortina.webp') no-repeat left center;
   background-size: cover;
-
 }
 
 .animated-right {
@@ -51,5 +50,4 @@
   to {
     transform: translateX(-110%);
   }
-
 }

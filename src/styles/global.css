@@ -9,7 +9,6 @@
 @import './forward-movement.css';
 @import './horseman-walk.css';
 
-
 @theme {
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
   --font-display: 'Xilosa', ui-sans-serif, system-ui;
@@ -20,7 +19,7 @@
 :root {
   --submit-button-color: #851c98;
   --input-color: rgb(85, 79, 79);
-  --background-color-global: #FF9DB1;
+  --background-color-global: #ff9db1;
 }
 
 @layer base {

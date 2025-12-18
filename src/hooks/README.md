@@ -100,7 +100,7 @@ Para facilitar ainda mais, você pode usar o componente `AudioManager` que já i
 import { AudioManager } from '@/components'
 
 // No seu componente root ou onde desejar
-<AudioManager
+;<AudioManager
   audio1Path="/assets/audio/audio1.mp3"
   audio2Path="/assets/audio/audio2.mp3"
   audio3Path="/assets/audio/audio3.mp3"
@@ -223,7 +223,10 @@ return (
   <div>
     <button onClick={playAudio1}>Tocar</button>
     <p>Status: {audio1State.isPlaying ? 'Tocando' : 'Pausado'}</p>
-    <p>Tempo: {Math.floor(audio1State.currentTime)}s / {Math.floor(audio1State.duration)}s</p>
+    <p>
+      Tempo: {Math.floor(audio1State.currentTime)}s /{' '}
+      {Math.floor(audio1State.duration)}s
+    </p>
     <p>Volume: {Math.round(audio1State.volume * 100)}%</p>
   </div>
 )
@@ -238,4 +241,3 @@ return (
 3. **Limpeza**: O hook limpa automaticamente os áudios quando o componente desmonta.
 
 4. **Múltiplos áudios**: Por padrão, apenas um áudio toca por vez. Se `allowMultiple` for `true`, múltiplos áudios podem tocar simultaneamente.
-

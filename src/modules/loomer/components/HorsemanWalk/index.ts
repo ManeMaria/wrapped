@@ -1,1 +1,1 @@
-export * from './HorsemanWalk';
+export * from './HorsemanWalk'

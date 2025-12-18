@@ -1,2 +1,2 @@
-export * from './Border/Border';
-export * from './Curtain/Curtain';
+export * from './Border/Border'
+export * from './Curtain/Curtain'

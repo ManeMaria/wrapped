@@ -1,7 +1,6 @@
-import Cookies from 'js-cookie';
+import Cookies from 'js-cookie'
 
-import { ACCESS_TOKEN_ID, REFRESH_TOKEN_ID } from '@/config';
-
+import { ACCESS_TOKEN_ID, REFRESH_TOKEN_ID } from '@/config'
 
 export const cookies = {
   getAccess: () => Cookies.get(ACCESS_TOKEN_ID),
@@ -11,4 +10,4 @@ export const cookies = {
   setRefresh: (refreshToken: string) =>
     Cookies.set(REFRESH_TOKEN_ID, refreshToken),
   clearRefresh: () => Cookies.remove(REFRESH_TOKEN_ID),
-};
+}

@@ -30,14 +30,11 @@
   100% {
     transform: translateY(0);
   }
-
-
 }
 
 .image-wrapper {
   position: relative;
   height: 100%;
-
 }
 
 .image-wrapper img {
@@ -71,7 +68,6 @@
     opacity: 0;
   }
 }
-
 
 .flash-effect {
   position: absolute;

@@ -1,1 +1,1 @@
-export * from './Thunder';
+export * from './Thunder'
