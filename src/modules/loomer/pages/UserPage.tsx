@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { Border, Curtain } from '@/components'
 import { useGetUser } from '@/modules/loomer/api/queries'
@@ -6,6 +6,7 @@ import { Card } from '@/modules/loomer/components/Card'
 import { cn } from '@/lib'
 import { Thunder } from '@/modules/loomer/components/Thunder'
 import { HorsemanWalk } from '@/modules/loomer/components/HorsemanWalk'
+import { Local } from '@/modules/loomer/components/Local'
 
 export const UserPage = () => {
   const { me } = useParams({ strict: false })
@@ -406,7 +407,6 @@ export const UserPage = () => {
             </div>
           )}
         </Card>
-
         {!!user?.supercoins && (
           <Card>
             {(isCentered) => (
@@ -796,7 +796,7 @@ export const UserPage = () => {
                   loading="lazy"
                   src="/assets/images/group2.png"
                   alt="group2"
-                  className="object-contain absolute -bottom-[30%]  left-0  w-[100%]"
+                  className="object-contain absolute -bottom-[25%] left-0 w-[100%]"
                 />
               </span>
             </div>
@@ -804,7 +804,62 @@ export const UserPage = () => {
         </Card>
         <Card>
           {(isCentered) => (
-            <div className={cn('text-[35px] ')}>
+            <div className="p-8 mt-auto">
+              <img
+                loading="lazy"
+                src="/assets/images/caw.png"
+                alt="caw"
+                className={cn(
+                  'object-contain w-[95%]',
+                  isCentered &&
+                  'animate__animated  animate__pulse animate__infinite ml-auto',
+                )}
+              />
+              <div className="grid  text-[32px] mt-[5dvh]">
+                <div className={cn('typing-effect', isCentered && 'typing-animated ')}>
+                  Se sua pernolalidade
+                </div>
+                <div className={cn('typing-effect', isCentered && 'typing-animated delay-2s')}>
+                  Localização fosse
+                </div>
+
+                <div className={cn('typing-effect', isCentered && 'typing-animated delay-2-5s')}>
+                  Qual seria o seu chão?
+                </div>
+              </div>
+              <span className={cn('relative w-full h-[35dvh] grid place-items-end')}>
+                <img
+                  loading="lazy"
+                  src="/assets/images/caquito.png"
+                  alt="caquito"
+                  className={cn(
+                    'object-contain w-[45%]',
+                    isCentered &&
+                    'animate__animated  animate__pulse animate__infinite',
+                  )}
+                />
+
+              </span>
+            </div>
+          )}
+        </Card>
+        <Card>
+          {(isCentered) => (
+            <Local isVisible={isCentered}>
+              <div className={cn('grid place-items-center', isCentered && 'animate__animated  animate__fadeIn animate__delay-2s')}>
+                <h2 className="text-[35px] typing-effect typing-animated text-center">
+                  {user?.personality}
+                </h2>
+                <h2 className="text-[20px] max-w-[300px] mx-auto text-center">
+                  {user?.personalityDescription}
+                </h2>
+              </div>
+            </Local>
+          )}
+        </Card>
+        <Card>
+          {(isCentered) => (
+            <div className={cn('text-[35px]')}>
               <div className="grid p-8">
                 <div
                   className={cn(
@@ -850,8 +905,9 @@ export const UserPage = () => {
                   loading="lazy"
                   src="/assets/images/sun_two.png"
                   alt="brother"
-                  className="object-cover w-[95%]"
+                  className="object-cover w-[85%] ml-auto"
                 />
+
               </span>
             </div>
           )}
@@ -866,7 +922,7 @@ export const UserPage = () => {
                     isCentered && 'typing-animated',
                   )}
                 >
-                  Pois ser Loomer é 
+                  Pois ser Loomer é
                 </div>
                 <div
                   className={cn(
