@@ -5,6 +5,9 @@
 @import './border.css';
 @import './curtain.css';
 @import './down.css';
+@import './balance.css';
+@import './forward-movement.css';
+@import './horseman-walk.css';
 
 
 @theme {

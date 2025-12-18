@@ -4,7 +4,7 @@
 }
 
 .typing-animated {
-  animation: typing 1.5s steps(22) 1s normal both;
+  animation: typing 1.3s steps(22) 1s normal both;
 }
 
 @keyframes typing {
@@ -29,8 +29,16 @@
   animation-delay: 3s;
 }
 
+.delay-3-5s {
+  animation-delay: 3.5s;
+}
+
 .delay-4s {
   animation-delay: 4s;
+}
+
+.delay-4-5s {
+  animation-delay: 4.5s;
 }
 
 .delay-5s {

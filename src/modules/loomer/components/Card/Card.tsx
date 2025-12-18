@@ -58,7 +58,7 @@ export const Card = ({ children, className }: CardProps) => {
   return (
     <div
       ref={cardRef}
-      className={cn('h-screen w-full overflow-hidden card', className)}
+      className={cn('h-dvh w-full overflow-hidden card', className)}
       data-visible={isVisible}
       data-has-left-screen={hasLeftScreen}
     >
