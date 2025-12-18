@@ -6,13 +6,16 @@ import type { LoginFormType } from '@/modules/auth/utils';
 import { loginSchema } from '@/modules/auth/utils'
 
 type LoginFormProps = {
-  onSubmit: (data: LoginFormType) => void
+  onSubmit: (data: {
+    password: string;
+    email: string;
+  }) => void
   isPending: boolean
 }
 
 type InputFormProps = {
   label: string
-  type: 'email' | 'password'
+  type: 'email' | 'birthDate'
   register: UseFormRegister<LoginFormType>
   errors: FieldErrors<LoginFormType>
   placeholder: string
@@ -32,13 +35,13 @@ const InputForm = ({
     >
       <p className="text-sm font-medium mb-1 ">{label}</p>
       <input
-        type={type}
+        type={type === 'birthDate' ? 'number' : 'email'}
         {...register(type)}
         className="input-form focus:outline-none"
         placeholder={placeholder}
       />
       {errors[type] && (
-        <p className="text-black text-sm ml-2 mt-1">{errors[type]?.message}</p>
+        <p className="text-black text-sm ml-2 mt-1">{errors[type]?.message ?? ''}</p>
       )}
     </label>
   )
@@ -55,7 +58,10 @@ export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
   })
 
   const handleSubmitForm = (data: LoginFormType) => {
-    onSubmit(data)
+    onSubmit({
+      email: data.email,
+      password: data.birthDate
+    })
   }
 
   return (
@@ -80,7 +86,7 @@ export const LoginForm = ({ onSubmit, isPending }: LoginFormProps) => {
       />
       <InputForm
         label="Data de nascimento"
-        type="password"
+        type="birthDate"
         register={register}
         errors={errors}
         placeholder="Data de nascimento (DDMMYYYY)"

@@ -1,7 +1,8 @@
 import axiosInstance from 'axios'
 import type { AxiosError, AxiosRequestConfig, AxiosResponseHeaders } from 'axios';
+import { VITE_API_URL } from '@/config';
+import { cookies } from '@/utils';
 
-const VITE_API_URL = import.meta.env.VITE_API_URL
 
 const config: AxiosRequestConfig = {
   baseURL: VITE_API_URL,
@@ -33,11 +34,14 @@ authenticatedInstance.interceptors.response.use(
 
 export const axiosProvider = {
   unauthorized() {
+
     unathenticatedInstance.defaults.baseURL = VITE_API_URL
 
     return unathenticatedInstance
   },
   authorized() {
+    console.log('cookies', cookies)
+    authenticatedInstance.defaults.headers.common.Authorization = `Bearer ${cookies.getAccess()}`;
     authenticatedInstance.interceptors.request.use(
       function (newConfig) {
         newConfig.baseURL = VITE_API_URL

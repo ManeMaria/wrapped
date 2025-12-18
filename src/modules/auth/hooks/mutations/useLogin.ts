@@ -2,15 +2,15 @@ import { useMutation } from '@tanstack/react-query'
 import { login } from '@/modules/auth/api';
 
 type UseLoginProps = {
-  onSuccess?: () => void;
+  onSuccess?: (data: unknown) => void;
   onError?: (error: Error) => void;
 }
 
 export const useLogin = ({ onSuccess, onError }: UseLoginProps) => {
   return useMutation({
     mutationFn: login,
-    onSuccess: () => {
-      onSuccess?.();
+    onSuccess: (data) => {
+      onSuccess?.(data);
     },
     onError: (error) => {
       onError?.(error);

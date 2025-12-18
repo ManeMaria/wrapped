@@ -8,7 +8,7 @@ export const emailLoginSchema = z
 
 export const loginSchema = z.object({
   email: emailLoginSchema,
-  password: z
+  birthDate: z
     .string()
     .trim()
     .regex(/^\d+$/, 'Use apenas números')
