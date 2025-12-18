@@ -22,8 +22,9 @@ unathenticatedInstance.interceptors.response.use(
 authenticatedInstance.interceptors.response.use(
   (response) => response.data,
   async (error: AxiosError) => {
+
     if (error.response) {
-      if (error.response.status !== 401 && error.response.status !== 403) {
+      if (error.response.status !== 401) {
         return await Promise.reject(error)
       }
     }

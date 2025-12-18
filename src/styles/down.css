@@ -1,0 +1,116 @@
+.down-effect {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  visibility: hidden;
+  /* Garante que o elemento que sai de cima da tela não seja visível */
+}
+
+.down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(-100%);
+  animation: down-effect 2s 9.5s ease-in-out forwards;
+  background-color: black;
+}
+
+.down-visible {
+  visibility: visible;
+}
+
+@keyframes down-effect {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  display: block;
+  /* Garantir que a imagem ocupe todo o espaço */
+}
+
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color-global);
+  /* Cor que você deseja sobrepor */
+  mix-blend-mode: multiply;
+  /* Pode experimentar outros modos de mistura */
+}
+
+.fade-out {
+  animation: fade-out 1s 12.5s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.flash-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: flash 1s 7.75s ease-in-out forwards;
+  /* Ciclo de 2 segundos, altere o tempo conforme necessário */
+}
+
+/* Flash Effect: Preto e Branco alternados */
+@keyframes flash {
+  0% {
+    background-color: white;
+    /* Tela branca */
+    opacity: 1;
+  }
+
+  25% {
+    background-color: black;
+    /* Tela preta */
+    opacity: 1;
+  }
+
+  50% {
+    background-color: white;
+    /* Tela branca novamente */
+    opacity: 1;
+  }
+
+  75% {
+    background-color: black;
+    /* Tela preta novamente */
+    opacity: 1;
+  }
+
+  100% {
+    background-color: white;
+    /* Tela branca final */
+    opacity: 1;
+    visibility: hidden;
+  }
+}

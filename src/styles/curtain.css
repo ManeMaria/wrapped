@@ -6,23 +6,30 @@
 }
 
 .curtain-effect-left {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   inset: 0;
   background: url("/assets/images/cortina.webp") no-repeat center right;
   background-size: cover;
-  will-change: transform;
-  animation: curtain-into-left 2s ease-in-out forwards;
 }
 
 .curtain-effect-right {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   inset: 0;
   background: url("/assets/images/cortina.webp") no-repeat left center;
   background-size: cover;
-  will-change: transform;
+
+}
+
+.animated-right {
   animation: curtain-into-right 2s ease-in-out forwards;
+  will-change: transform;
+}
+
+.animated-left {
+  animation: curtain-into-left 2s ease-in-out forwards;
+  will-change: transform;
 }
 
 @keyframes curtain-into-right {

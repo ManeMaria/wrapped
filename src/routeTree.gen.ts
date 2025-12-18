@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as authLoginIndexRouteImport } from './routes/(auth)/login/index'
-import { Route as appMeIndexRouteImport } from './routes/(app)/me/index'
+import { Route as appMeIndexRouteImport } from './routes/(app)/$me/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -24,33 +24,33 @@ const authLoginIndexRoute = authLoginIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const appMeIndexRoute = appMeIndexRouteImport.update({
-  id: '/(app)/me/',
-  path: '/me/',
+  id: '/(app)/$me/',
+  path: '/$me/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/me': typeof appMeIndexRoute
+  '/$me': typeof appMeIndexRoute
   '/login': typeof authLoginIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/me': typeof appMeIndexRoute
+  '/$me': typeof appMeIndexRoute
   '/login': typeof authLoginIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/(app)/me/': typeof appMeIndexRoute
+  '/(app)/$me/': typeof appMeIndexRoute
   '/(auth)/login/': typeof authLoginIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/me' | '/login'
+  fullPaths: '/' | '/$me' | '/login'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/me' | '/login'
-  id: '__root__' | '/' | '/(app)/me/' | '/(auth)/login/'
+  to: '/' | '/$me' | '/login'
+  id: '__root__' | '/' | '/(app)/$me/' | '/(auth)/login/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -75,10 +75,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(app)/me/': {
-      id: '/(app)/me/'
-      path: '/me'
-      fullPath: '/me'
+    '/(app)/$me/': {
+      id: '/(app)/$me/'
+      path: '/$me'
+      fullPath: '/$me'
       preLoaderRoute: typeof appMeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
