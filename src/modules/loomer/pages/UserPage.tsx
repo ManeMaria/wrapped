@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigate, useParams } from '@tanstack/react-router'
 import { Border, Curtain } from '@/components'
 import { useGetUser } from '@/modules/loomer/api/queries'
@@ -816,18 +816,35 @@ export const UserPage = () => {
                 )}
               />
               <div className="grid  text-[32px] mt-[5dvh]">
-                <div className={cn('typing-effect', isCentered && 'typing-animated ')}>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated ',
+                  )}
+                >
                   Se sua pernolalidade
                 </div>
-                <div className={cn('typing-effect', isCentered && 'typing-animated delay-2s')}>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2s',
+                  )}
+                >
                   Localização fosse
                 </div>
 
-                <div className={cn('typing-effect', isCentered && 'typing-animated delay-2-5s')}>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2-5s',
+                  )}
+                >
                   Qual seria o seu chão?
                 </div>
               </div>
-              <span className={cn('relative w-full h-[35dvh] grid place-items-end')}>
+              <span
+                className={cn('relative w-full h-[35dvh] grid place-items-end')}
+              >
                 <img
                   loading="lazy"
                   src="/assets/images/caquito.png"
@@ -838,7 +855,6 @@ export const UserPage = () => {
                     'animate__animated  animate__pulse animate__infinite',
                   )}
                 />
-
               </span>
             </div>
           )}
@@ -846,7 +862,13 @@ export const UserPage = () => {
         <Card>
           {(isCentered) => (
             <Local isVisible={isCentered}>
-              <div className={cn('grid place-items-center', isCentered && 'animate__animated  animate__fadeIn animate__delay-2s')}>
+              <div
+                className={cn(
+                  'grid place-items-center',
+                  isCentered &&
+                  'animate__animated  animate__fadeIn animate__delay-2s',
+                )}
+              >
                 <h2 className="text-[35px] typing-effect typing-animated text-center">
                   {user?.personality}
                 </h2>
@@ -907,7 +929,6 @@ export const UserPage = () => {
                   alt="brother"
                   className="object-cover w-[85%] ml-auto"
                 />
-
               </span>
             </div>
           )}
