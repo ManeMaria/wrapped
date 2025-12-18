@@ -6,7 +6,7 @@
 }
 
 .curtain-effect-left {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   inset: 0;
   background: url('/assets/images/cortina.webp') no-repeat center right;
@@ -14,7 +14,7 @@
 }
 
 .curtain-effect-right {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   inset: 0;
   background: url('/assets/images/cortina.webp') no-repeat left center;
