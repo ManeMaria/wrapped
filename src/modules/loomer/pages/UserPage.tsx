@@ -78,7 +78,7 @@ export const UserPage = () => {
                   className={cn(
                     'text-[30px] ',
                     isCentered &&
-                      'animate__animated  animate__fadeOutLeft animate__delay-5s',
+                    'animate__animated  animate__fadeOutLeft animate__delay-5s',
                   )}
                 >
                   <div
@@ -374,7 +374,7 @@ export const UserPage = () => {
                       className={cn(
                         'relative w-[70%]',
                         isCentered &&
-                          `animate__animated  animate__fadeIn animate__delay-${i + 1}s`,
+                        `animate__animated  animate__fadeIn animate__delay-${i + 1}s`,
                       )}
                       style={
                         i % 2 !== 0
@@ -449,7 +449,7 @@ export const UserPage = () => {
                   className={cn(
                     'relative w-full grid place-items-center',
                     isCentered &&
-                      'animate__animated  animate__fadeIn animate__delay-4s',
+                    'animate__animated  animate__fadeIn animate__delay-4s',
                   )}
                 >
                   <img
@@ -506,7 +506,7 @@ export const UserPage = () => {
                   className={cn(
                     'relative w-full grid place-items-center',
                     isCentered &&
-                      'animate__animated  animate__fadeInUpBig animate__delay-3s',
+                    'animate__animated  animate__fadeInUpBig animate__delay-3s',
                   )}
                 >
                   <img
@@ -594,7 +594,7 @@ export const UserPage = () => {
                 className={cn(
                   'relative w-full grid place-items-center',
                   isCentered &&
-                    'animate__animated  animate__backInUp animate__delay-5s',
+                  'animate__animated  animate__backInUp animate__delay-5s',
                 )}
               >
                 <img
@@ -648,7 +648,7 @@ export const UserPage = () => {
                 className={cn(
                   'relative w-full grid place-items-center',
                   isCentered &&
-                    'animate__animated  animate__fadeInUpBig animate__delay-3s',
+                  'animate__animated  animate__fadeInUpBig animate__delay-3s',
                 )}
               >
                 <img
@@ -702,7 +702,7 @@ export const UserPage = () => {
                 className={cn(
                   'relative w-full grid place-items-center',
                   isCentered &&
-                    'animate__animated  animate__zoomIn animate__delay-3s',
+                  'animate__animated  animate__zoomIn animate__delay-3s',
                 )}
               >
                 <img
@@ -789,7 +789,7 @@ export const UserPage = () => {
                   className={cn(
                     'object-contain w-[85%]',
                     isCentered &&
-                      'animate__animated  animate__slideInLeft animate__delay-4s',
+                    'animate__animated  animate__slideInLeft animate__delay-4s',
                   )}
                 />
                 <img
@@ -797,6 +797,128 @@ export const UserPage = () => {
                   src="/assets/images/group2.png"
                   alt="group2"
                   className="object-contain absolute -bottom-[30%]  left-0  w-[100%]"
+                />
+              </span>
+            </div>
+          )}
+        </Card>
+        <Card>
+          {(isCentered) => (
+            <div className={cn('text-[35px] ')}>
+              <div className="grid p-8">
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated',
+                  )}
+                >
+                  Essa história aqui não
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2s',
+                  )}
+                >
+                  finda aqui não
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2-5s',
+                  )}
+                >
+                  Só se inicia outra
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-3s',
+                  )}
+                >
+                  estação
+                </div>
+              </div>
+              <span
+                className={cn(
+                  'relative w-full grid place-items-center',
+                  isCentered &&
+                  'animate__animated  animate__zoomIn animate__delay-3s',
+                )}
+              >
+                <img
+                  loading="lazy"
+                  src="/assets/images/sun_two.png"
+                  alt="brother"
+                  className="object-cover w-[95%]"
+                />
+              </span>
+            </div>
+          )}
+        </Card>
+        <Card>
+          {(isCentered) => (
+            <div className={cn('text-[35px] ')}>
+              <div className="grid p-8">
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated',
+                  )}
+                >
+                  Pois ser Loomer é 
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2s',
+                  )}
+                >
+                  jornada
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-2-5s',
+                  )}
+                >
+                  De coragem e
+                </div>
+                <div
+                  className={cn(
+                    'typing-effect',
+                    isCentered && 'typing-animated delay-3s',
+                  )}
+                >
+                  construção
+                </div>
+              </div>
+              <span
+                className={cn(
+                  'relative w-full grid place-items-center',
+                  isCentered &&
+                  'animate__animated  animate__zoomIn animate__delay-3s',
+                )}
+              >
+                <img
+                  loading="lazy"
+                  src="/assets/images/sun.png"
+                  alt="brother"
+                  className="object-cover absolute bottom-[3.75rem] right-0"
+                />
+              </span>
+              <span
+                className={cn(
+                  'relative w-full grid place-items-center',
+                  isCentered &&
+                  'animate__animated  animate__zoomIn animate__delay-3s',
+                )}
+              >
+                <img
+                  loading="lazy"
+                  src="/assets/images/cangaco_man.webp"
+                  alt="brother"
+                  className="object-cover absolute top-[-3.75rem]"
                 />
               </span>
             </div>
