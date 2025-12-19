@@ -9,6 +9,7 @@ import { HorsemanWalk } from '@/modules/loomer/components/HorsemanWalk'
 import { Local } from '@/modules/loomer/components/Local'
 
 export const UserPage = () => {
+
   const { me } = useParams({ strict: false })
 
   const navigate = useNavigate()
@@ -25,6 +26,7 @@ export const UserPage = () => {
       navigate({ to: '/login' })
     }
   }, [isError])
+
 
   return (
     <div className='max-w-[600px] mx-auto relative h-screen'>
@@ -210,7 +212,6 @@ export const UserPage = () => {
               </div>
             )}
           </Card>
-
           <Card>
             {(isCentered) => (
               <div>
