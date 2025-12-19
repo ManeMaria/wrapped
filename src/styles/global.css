@@ -13,7 +13,7 @@
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
   --font-display: 'Xilosa', ui-sans-serif, system-ui;
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
-  --background-image-app: url('/assets/images/global_background_min.webp');
+  --background-image-app: url('/assets/images/global_background_min.webp') no-repeat center center;
 }
 
 :root {
@@ -25,6 +25,9 @@
 @layer base {
   html {
     font-family: 'Xilosa', ui-sans-serif, system-ui;
+    height: 100%;
+    background: var(--background-image-app);
+    overflow: hidden;
   }
 
   body {
@@ -32,6 +35,7 @@
     font-family: 'Xilosa', ui-sans-serif, system-ui;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
   }
 
   transition {
