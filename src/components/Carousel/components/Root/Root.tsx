@@ -3,9 +3,6 @@ import type { CarouselProps } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
-  CarouselNext,
-  CarouselPrevious
-
 } from "@/components/ui/carousel";
 
 

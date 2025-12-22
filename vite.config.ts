@@ -7,7 +7,7 @@ import legacy from '@vitejs/plugin-legacy';
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
 
   return {
