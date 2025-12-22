@@ -4,7 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 export const Route = createRootRoute({
   component: () => (
-    <main className="w-full h-full bg-app bg-cover bg-center bg-no-repeat font-sans">
+    <main className="w-full h-full  font-sans">
       <Outlet />
       <TanStackDevtools
         config={{
