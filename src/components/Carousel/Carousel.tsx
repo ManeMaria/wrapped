@@ -1,5 +1,10 @@
-import { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
-import { Root } from "./components/Root/Root";
+import {
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '../ui/carousel'
+import { Root } from './components/Root/Root'
 
 export const Carousel = {
   Root,
@@ -7,4 +12,4 @@ export const Carousel = {
   Item: CarouselItem,
   Previous: CarouselPrevious,
   Next: CarouselNext,
-};
+}

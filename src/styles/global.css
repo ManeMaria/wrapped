@@ -10,13 +10,14 @@
 @import './balance.css';
 @import './forward-movement.css';
 @import './horseman-walk.css';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @theme {
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
   --font-display: 'Xilosa', ui-sans-serif, system-ui;
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
-  --background-image-app: url('/assets/images/global_background_min.webp') no-repeat center center;
+  --background-image-app: url('/assets/images/global_background_min.webp')
+    no-repeat center center;
 }
 
 :root {
