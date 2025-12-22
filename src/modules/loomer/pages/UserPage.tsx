@@ -24,7 +24,7 @@ export const UserPage = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate({ to: '/login' })
+      navigate({ to: '/' })
     }
   }, [isError])
 
@@ -33,7 +33,7 @@ export const UserPage = () => {
     <div className='max-w-[600px] mx-auto relative h-screen'>
       <Curtain isVisible={isSuccess}>
         <Border>
-          <Carousel.Root className='h-screen' ha>
+          <Carousel.Root className='h-screen'>
             {() => (
               <>
                 <Card>
