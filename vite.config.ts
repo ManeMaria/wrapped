@@ -32,11 +32,6 @@ export default defineConfig(({ command }) => {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
-    },
-    optimizeDeps: {
-      esbuildOptions: {
-        target: 'esnext',
-      },
-    },
+    }
   };
 })
