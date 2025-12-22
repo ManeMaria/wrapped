@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib'
+import { Carousel } from '@/components/Carousel'
 
 type CardProps = {
   children: (centered: boolean) => React.ReactNode
@@ -55,13 +56,15 @@ export const Card = ({ children, className }: CardProps) => {
   }, [])
 
   return (
-    <div
-      ref={cardRef}
-      className={cn('h-dvh w-full overflow-hidden card', className)}
-      data-visible={isVisible}
-      data-has-left-screen={hasLeftScreen}
-    >
-      {children(isVisible)}
-    </div>
+    <Carousel.Item>
+      <div
+        ref={cardRef}
+        className={cn('h-dvh w-full overflow-hidden card', className)}
+        data-visible={isVisible}
+        data-has-left-screen={hasLeftScreen}
+      >
+        {children(isVisible)}
+      </div>
+    </Carousel.Item>
   )
 }
