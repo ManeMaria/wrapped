@@ -5,6 +5,6 @@ export const useGetUser = (params: { email: string }) => {
   return useQuery({
     queryKey: ['user', params.email],
     queryFn: () => getUser(params),
-    // enabled: !!params.email,
+    enabled: !!params.email,
   })
 }
