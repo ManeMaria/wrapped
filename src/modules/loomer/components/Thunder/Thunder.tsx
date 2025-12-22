@@ -1,9 +1,35 @@
+import { useEffect } from 'react';
+import { useAudioManager } from '@/hooks/useAudioManager';
 import { cn } from '@/lib'
+
 
 type ThunderProps = {
   isVisible: boolean
 }
+
 export const Thunder = ({ isVisible }: ThunderProps) => {
+  const { playAudio } = useAudioManager({
+    audio: {
+      src: '/assets/audios/thunder.wav',
+      loop: false,
+      volume: 1,
+    }
+  })
+
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>
+    if (isVisible) {
+      timeout = setTimeout(() => {
+        playAudio()
+      }, 7500)
+    }
+
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [isVisible, playAudio])
+
   return (
     <div className="absolute top-0 left-0 w-full h-full">
       <div className={cn(isVisible && 'flash-effect')} />
