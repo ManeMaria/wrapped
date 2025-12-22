@@ -16,7 +16,7 @@
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
   --font-display: 'Xilosa', ui-sans-serif, system-ui;
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
-  --background-image-app: url('/assets/images/bg-app.png') repeat center center;
+  --background-image-app: url('/assets/images/bg-app.png') no-repeat center center;
 }
 
 :root {
