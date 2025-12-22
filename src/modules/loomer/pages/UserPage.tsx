@@ -1008,6 +1008,92 @@ export const UserPage = () => {
                     </div>
                   )}
                 </Card>
+
+                <Card>
+                  {(isCentered) => (
+                    <Local isVisible={isCentered}>
+                      <div className="grid size-full">
+                        <div className="grid px-6">
+                          <div
+                            className={cn(
+                              'typing-effect text-[25px]',
+                              isCentered && 'typing-animated',
+                            )}
+                          >
+                            Meu lugar é o
+                          </div>
+                          <div
+                            className={cn(
+                              'typing-effect text-[28px]',
+                              isCentered && 'typing-animated delay-2s',
+                            )}
+                          >
+                            {user?.personality}
+                          </div>
+
+                          <div
+                            className={cn(
+                              'typing-effect text-[16px]',
+                              isCentered && 'typing-animated delay-2s',
+                            )}
+                          >
+                            Meu valor é {user?.loomiValue}
+                          </div>
+
+                          <div className="grid justify-start grid-cols-2 gap-2 size-full mt-4">
+                            <div className={cn("text-[14px]", isCentered && 'animate__animated animate__fadeIn animate__delay-2s')}>
+                              <div className="text-[18px]">
+                                {user?.loomiDays}
+                              </div>
+                              <span>
+                                Dias de Loomi
+                              </span>
+                            </div>
+                            <div className={cn("text-[14px]", isCentered && 'animate__animated animate__fadeIn animate__delay-2s')}>
+                              <div className="text-[18px]">
+                                {user?.projectsCount}
+                              </div>
+                              <span>
+                                Qtde de Projetos
+                              </span>
+                            </div>
+                            <div className={cn("text-[14px]", isCentered && 'animate__animated animate__fadeIn animate__delay-4s')}>
+                              <div className="text-[18px]">
+                                {user?.gratitudesAndBoosts}
+                              </div>
+                              <span>
+                                Colaboração com outros Loomers
+                              </span>
+                            </div>
+                            <div className={cn("text-[14px]", isCentered && 'animate__animated animate__fadeIn animate__delay-4s')}>
+                              <div className="text-[18px]">
+                                {user?.peopleImpacted}
+                              </div>
+                              <span>
+                                Pessoas impactadas
+                              </span>
+                            </div>
+                            <div className={cn("grid place-items-start text-[14px] break-after-auto col-span-2", isCentered && 'animate__animated animate__fadeIn animate__delay-5s')}>
+                              <div className="text-[18px]">
+                                {user?.topCollaborator}
+                              </div>
+                              <span>
+                                Loomer que mais colaborei
+                              </span>
+                            </div>
+                            <img
+                              loading='lazy'
+                              src='/assets/images/logo-app.png' alt='logo-app'
+                              className={cn('justify-self-center object-contain w-[200px] col-span-2 mt-auto',
+                                isCentered && 'animate__animated animate__fadeIn animate__delay-5s')}
+                            />
+                          </div>
+
+                        </div>
+                      </div>
+                    </Local>
+                  )}
+                </Card>
               </>
             )}
           </Carousel.Root>
