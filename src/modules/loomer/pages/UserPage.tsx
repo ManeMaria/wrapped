@@ -344,7 +344,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[35px] p-8')}>
+                    <div className={cn('text-[32px] p-8')}>
                       <div className="grid ">
                         <div
                           className={cn(
@@ -416,7 +416,7 @@ export const UserPage = () => {
                 {!!user?.supercoins && (
                   <Card>
                     {(isCentered) => (
-                      <div className={cn('text-[35px] ')}>
+                      <div className={cn('text-[32px] ')}>
                         <div className="grid p-8">
                           <div
                             className={cn(
@@ -473,7 +473,7 @@ export const UserPage = () => {
                 {!!user?.loomicoins && (
                   <Card>
                     {(isCentered) => (
-                      <div className={cn('text-[35px] ')}>
+                      <div className={cn('text-[32px] ')}>
                         <div className="grid p-8">
                           <div
                             className={cn(
@@ -615,7 +615,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[35px] ')}>
+                    <div className={cn('text-[32px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -669,7 +669,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[35px] ')}>
+                    <div className={cn('text-[32px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -876,7 +876,7 @@ export const UserPage = () => {
                           'animate__animated  animate__fadeIn animate__delay-2s',
                         )}
                       >
-                        <h2 className="text-[35px] typing-effect typing-animated text-center">
+                        <h2 className="text-[32px] typing-effect typing-animated text-center">
                           {user?.personality}
                         </h2>
                         <h2 className="text-[20px] max-w-[300px] mx-auto text-center">
@@ -888,7 +888,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[35px]')}>
+                    <div className={cn('text-[32px]')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -942,7 +942,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[35px] ')}>
+                    <div className={cn('text-[32px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
