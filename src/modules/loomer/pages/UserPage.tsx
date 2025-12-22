@@ -769,7 +769,7 @@ export const UserPage = () => {
                                 isCentered && 'typing-animated delay-2-5s',
                               )}
                             >
-                              gymrats entou
+                              gymrats entrou
                             </div>
                           </>
                         )}
