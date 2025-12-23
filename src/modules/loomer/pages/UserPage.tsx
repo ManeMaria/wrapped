@@ -365,9 +365,9 @@ export const UserPage = () => {
                             isCentered && 'typing-animated ',
                           )}
                         >
-                          {user?.projectsCount === 1
-                            ? `Foi ${user?.projectsCount} projeto`
-                            : `Foram ${user?.projectsCount} projetos`}{' '}
+                          Em {user?.projectsCount === 1
+                            ? `projeto`
+                            : `projetos`}{' '}
                           entrou
                         </div>
                         <img
