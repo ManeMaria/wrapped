@@ -1,8 +1,10 @@
-import { useNavigate } from '@tanstack/react-router'
-import { useState } from 'react'
-import { LoginForm } from '@/modules/auth/components'
-import { useLogin } from '@/modules/auth/hooks/mutations'
-import { cookies } from '@/utils'
+import { useNavigate } from '@tanstack/react-router';
+import { useState } from 'react';
+import { toast } from 'sonner';
+import type { AxiosError } from 'axios';
+import { LoginForm } from '@/modules/auth/components';
+import { useLogin } from '@/modules/auth/hooks/mutations';
+import { cookies } from '@/utils';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState<string>('')
@@ -11,6 +13,9 @@ export const LoginPage = () => {
     onSuccess: (response) => {
       cookies.setAccess((response as { access_token: string }).access_token)
       navigate({ to: '/$me', params: { me: email } })
+    },
+    onError: (error: unknown) => {
+      toast.error((error as AxiosError<{ message: string }>).response?.data?.message ?? 'Erro ao fazer login')
     },
   })
 
