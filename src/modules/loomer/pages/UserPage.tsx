@@ -51,7 +51,7 @@ export const UserPage = () => {
       playAudio()
     }
 
-    setConfirmPlayAudio(shouldPlay)
+    setConfirmPlayAudio(true)
   }, [isSuccess, playAudio])
 
   return (
