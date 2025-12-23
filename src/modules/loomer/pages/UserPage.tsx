@@ -110,7 +110,7 @@ export const UserPage = () => {
                           className={cn(
                             'text-[30px] ',
                             isCentered &&
-                              'animate__animated  animate__fadeOutLeft animate__delay-5s',
+                            'animate__animated  animate__fadeOutLeft animate__delay-5s',
                           )}
                         >
                           <div
@@ -174,7 +174,7 @@ export const UserPage = () => {
                           className={cn(
                             'grid place-items-end h-full',
                             isCentered &&
-                              'animate__animated animate__fadeIn animate__delay-5s',
+                            'animate__animated animate__fadeIn animate__delay-5s',
                           )}
                         >
                           <span
@@ -376,7 +376,7 @@ export const UserPage = () => {
                           className={cn(
                             'object-contain w-[25vw] max-w-[300px]  justify-self-end',
                             isCentered &&
-                              'animate__animated animate__fadeIn animate__delay-2s',
+                            'animate__animated animate__fadeIn animate__delay-2s',
                           )}
                         />
                         <div
@@ -393,7 +393,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center',
                           isCentered &&
-                            'animate__animated animate__fadeIn animate__delay-2s',
+                          'animate__animated animate__fadeIn animate__delay-2s',
                         )}
                       >
                         <img
@@ -414,7 +414,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] p-8')}>
+                    <div className={cn('text-[30px] p-8')}>
                       <div className="grid ">
                         <div
                           className={cn(
@@ -451,7 +451,7 @@ export const UserPage = () => {
                               className={cn(
                                 'relative w-[70%]',
                                 isCentered &&
-                                  `animate__animated  animate__fadeIn animate__delay-${i + 1}s`,
+                                `animate__animated  animate__fadeIn animate__delay-${i + 1}s`,
                               )}
                               style={
                                 i % 2 !== 0
@@ -486,7 +486,7 @@ export const UserPage = () => {
                 {!!user?.supercoins && (
                   <Card>
                     {(isCentered) => (
-                      <div className={cn('text-[32px] ')}>
+                      <div className={cn('text-[30px] ')}>
                         <div className="grid p-8">
                           <div
                             className={cn(
@@ -525,7 +525,7 @@ export const UserPage = () => {
                           className={cn(
                             'relative w-full grid place-items-center',
                             isCentered &&
-                              'animate__animated  animate__fadeIn animate__delay-2-5s',
+                            'animate__animated  animate__fadeIn animate__delay-2-5s',
                           )}
                         >
                           <img
@@ -543,7 +543,7 @@ export const UserPage = () => {
                 {!!user?.loomicoins && (
                   <Card>
                     {(isCentered) => (
-                      <div className={cn('text-[32px] ')}>
+                      <div className={cn('text-[30px] ')}>
                         <div className="grid p-8">
                           <div
                             className={cn(
@@ -582,7 +582,7 @@ export const UserPage = () => {
                           className={cn(
                             'relative w-full grid place-items-center',
                             isCentered &&
-                              'animate__animated  animate__fadeInUpBig animate__delay-2-5s',
+                            'animate__animated  animate__fadeInUpBig animate__delay-2-5s',
                           )}
                         >
                           <img
@@ -598,7 +598,7 @@ export const UserPage = () => {
                 )}
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] ')}>
+                    <div className={cn('text-[30px] ')}>
                       <div className="grid p-8">
                         {user?.gratitudesAndBoosts ? (
                           <>
@@ -670,7 +670,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center',
                           isCentered &&
-                            'animate__animated  animate__backInUp animate__delay-4s',
+                          'animate__animated  animate__backInUp animate__delay-4s',
                         )}
                       >
                         <img
@@ -685,7 +685,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] ')}>
+                    <div className={cn('text-[30px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -724,7 +724,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center',
                           isCentered &&
-                            'animate__animated  animate__fadeInUpBig animate__delay-2-5s',
+                          'animate__animated  animate__fadeInUpBig animate__delay-2-5s',
                         )}
                       >
                         <img
@@ -739,7 +739,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] ')}>
+                    <div className={cn('text-[30px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -778,7 +778,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center h-full',
                           isCentered &&
-                            'animate__animated  animate__zoomIn animate__delay-2-5s',
+                          'animate__animated  animate__zoomIn animate__delay-2-5s',
                         )}
                       >
                         <img
@@ -793,7 +793,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] ')}>
+                    <div className={cn('text-[30px] ')}>
                       <div className="grid p-8">
                         {!!user?.loomiOfficeDays && (
                           <div
@@ -867,7 +867,7 @@ export const UserPage = () => {
                           className={cn(
                             'object-contain size-[90%]',
                             isCentered &&
-                              'animate__animated  animate__slideInLeft animate__delay-3s',
+                            'animate__animated  animate__slideInLeft animate__delay-3s',
                           )}
                         />
                         <img
@@ -891,10 +891,10 @@ export const UserPage = () => {
                         className={cn(
                           'object-contain w-[95%]',
                           isCentered &&
-                            'animate__animated  animate__pulse animate__infinite ml-auto',
+                          'animate__animated  animate__pulse animate__infinite ml-auto',
                         )}
                       />
-                      <div className="grid  text-[32px] mt-[5dvh]">
+                      <div className="grid  text-[30px] mt-[5dvh]">
                         <div
                           className={cn(
                             'typing-effect',
@@ -933,7 +933,7 @@ export const UserPage = () => {
                           className={cn(
                             'object-contain w-[45%]',
                             isCentered &&
-                              'animate__animated  animate__pulse animate__infinite',
+                            'animate__animated  animate__pulse animate__infinite',
                           )}
                         />
                       </span>
@@ -947,10 +947,10 @@ export const UserPage = () => {
                         className={cn(
                           'grid place-items-center',
                           isCentered &&
-                            'animate__animated  animate__fadeIn animate__delay-2s',
+                          'animate__animated  animate__fadeIn animate__delay-2s',
                         )}
                       >
-                        <h2 className="text-[32px] typing-effect typing-animated text-center">
+                        <h2 className="text-[30px] typing-effect typing-animated text-center">
                           {user?.personality}
                         </h2>
                         <h2 className="text-[20px] max-w-[300px] mx-auto text-center">
@@ -962,7 +962,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px]')}>
+                    <div className={cn('text-[30px]')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -1001,7 +1001,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full ml-auto',
                           isCentered &&
-                            'animate__animated  animate__zoomIn animate__delay-3s',
+                          'animate__animated  animate__zoomIn animate__delay-3s',
                         )}
                       >
                         <img
@@ -1016,7 +1016,7 @@ export const UserPage = () => {
                 </Card>
                 <Card>
                   {(isCentered) => (
-                    <div className={cn('text-[32px] ')}>
+                    <div className={cn('text-[30px] ')}>
                       <div className="grid p-8">
                         <div
                           className={cn(
@@ -1055,7 +1055,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center',
                           isCentered &&
-                            'animate__animated  animate__zoomIn animate__delay-3s',
+                          'animate__animated  animate__zoomIn animate__delay-3s',
                         )}
                       >
                         <img
@@ -1069,7 +1069,7 @@ export const UserPage = () => {
                         className={cn(
                           'relative w-full grid place-items-center',
                           isCentered &&
-                            'animate__animated  animate__zoomIn animate__delay-3s',
+                          'animate__animated  animate__zoomIn animate__delay-3s',
                         )}
                       >
                         <img
@@ -1119,7 +1119,7 @@ export const UserPage = () => {
                               className={cn(
                                 'text-[16px]',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-2s',
+                                'animate__animated animate__fadeIn animate__delay-2s',
                               )}
                             >
                               <div className="text-[18px]">
@@ -1131,7 +1131,7 @@ export const UserPage = () => {
                               className={cn(
                                 'text-[16px]',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-2s',
+                                'animate__animated animate__fadeIn animate__delay-2s',
                               )}
                             >
                               <div className="text-[18px]">
@@ -1143,7 +1143,7 @@ export const UserPage = () => {
                               className={cn(
                                 'text-[16px]',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-4s',
+                                'animate__animated animate__fadeIn animate__delay-4s',
                               )}
                             >
                               <div className="text-[18px]">
@@ -1155,7 +1155,7 @@ export const UserPage = () => {
                               className={cn(
                                 'text-[16px]',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-4s',
+                                'animate__animated animate__fadeIn animate__delay-4s',
                               )}
                             >
                               <div className="text-[18px]">
@@ -1167,7 +1167,7 @@ export const UserPage = () => {
                               className={cn(
                                 'grid place-items-start text-[16px] break-after-auto col-span-2',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-5s',
+                                'animate__animated animate__fadeIn animate__delay-5s',
                               )}
                             >
                               <div className="text-[18px]">
@@ -1182,7 +1182,7 @@ export const UserPage = () => {
                               className={cn(
                                 'justify-self-center object-contain w-[200px] col-span-2 mt-auto',
                                 isCentered &&
-                                  'animate__animated animate__fadeIn animate__delay-5s',
+                                'animate__animated animate__fadeIn animate__delay-5s',
                               )}
                             />
                           </div>
