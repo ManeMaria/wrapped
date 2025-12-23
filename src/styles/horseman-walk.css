@@ -28,6 +28,6 @@
 .horseman-walk {
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: -30px;
   animation: horseman-walk 8s ease-in-out infinite;
 }

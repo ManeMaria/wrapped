@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
   transform: translateY(-100%);
-  animation: down-effect 2s 9.5s ease-in-out forwards;
+  animation: down-effect 1s 9.5s ease-in-out forwards;
   background-color: black;
 }
 
@@ -78,6 +78,31 @@
   animation: flash 1s 7.75s ease-in-out forwards;
   /* Ciclo de 2 segundos, altere o tempo conforme necessário */
 }
+
+
+.animation_delay-4s {
+  animation: fadeOut 1s 4s ease-in-out forwards;
+}
+
+.animation_delay-5s {
+  animation: fadeOut 2s 5s ease-in forwards;
+}
+
+.animation_delay-9s {
+  animation: fadeOut 1s 9s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
 
 /* Flash Effect: Preto e Branco alternados */
 @keyframes flash {
