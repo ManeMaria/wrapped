@@ -365,7 +365,7 @@ export const UserPage = () => {
                             isCentered && 'typing-animated ',
                           )}
                         >
-                          Em {user?.projectsCount === 1
+                          Em {user?.projectsCount ? user?.projectsCount : ''} {user?.projectsCount === 1
                             ? `projeto`
                             : `projetos`}{' '}
                           entrou
