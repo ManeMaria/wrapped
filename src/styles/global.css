@@ -16,13 +16,14 @@
   --font-sans: 'Xilosa', ui-sans-serif, system-ui;
   --font-display: 'Xilosa', ui-sans-serif, system-ui;
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui;
-  --background-image-app: url('/assets/images/bg-app.webp') no-repeat center center;
+  --background-image-app: url('/assets/images/bg-app.webp') no-repeat center
+    center;
 }
 
 :root {
   --submit-button-color: #851c98;
   --input-color: rgb(85, 79, 79);
-  --background-color-global: #FF8BA6;
+  --background-color-global: #ff8ba6;
   --radius: 0.625rem;
 }
 

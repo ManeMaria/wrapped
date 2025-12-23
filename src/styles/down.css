@@ -79,7 +79,6 @@
   /* Ciclo de 2 segundos, altere o tempo conforme necessário */
 }
 
-
 .animation_delay-4s {
   animation: fadeOut 1s 4s ease-in-out forwards;
 }
@@ -102,7 +101,6 @@
     height: 0;
   }
 }
-
 
 /* Flash Effect: Preto e Branco alternados */
 @keyframes flash {

@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
-import { useAudioManager } from '@/hooks/useAudioManager';
+import { useEffect } from 'react'
+import { useAudioManager } from '@/hooks/useAudioManager'
 import { cn } from '@/lib'
-
 
 type ThunderProps = {
   isVisible: boolean
@@ -13,9 +12,8 @@ export const Thunder = ({ isVisible }: ThunderProps) => {
       src: '/assets/audios/thunder.wav',
       loop: false,
       volume: 1,
-    }
+    },
   })
-
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>

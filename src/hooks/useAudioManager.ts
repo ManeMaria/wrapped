@@ -64,7 +64,8 @@ export const useAudioManager = ({
             errorMessage = 'Erro de rede ao carregar o áudio'
             break
           case MediaError.MEDIA_ERR_DECODE:
-            errorMessage = 'Erro ao decodificar o áudio (formato não suportado ou arquivo corrompido)'
+            errorMessage =
+              'Erro ao decodificar o áudio (formato não suportado ou arquivo corrompido)'
             break
           case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
             errorMessage = `Formato de áudio não suportado ou arquivo não encontrado: ${audio.src}`
@@ -145,12 +146,17 @@ export const useAudioManager = ({
           })
           .catch((error) => {
             if (error.name !== 'NotAllowedError') {
-              console.error('Erro ao reproduzir áudio após carregamento:', error)
+              console.error(
+                'Erro ao reproduzir áudio após carregamento:',
+                error,
+              )
             }
             setIsAudioPlaying(false)
           })
       }
-      audioRef.current.addEventListener('canplaythrough', handleCanPlay, { once: true })
+      audioRef.current.addEventListener('canplaythrough', handleCanPlay, {
+        once: true,
+      })
     }
   }, [isAudioPlaying])
 
