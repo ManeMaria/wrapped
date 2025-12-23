@@ -27,16 +27,6 @@
   will-change: transform;
 }
 
-.animated-close-right {
-  animation: curtain-into-close-right 2s ease-in-out forwards;
-  will-change: transform;
-}
-
-.animated-close-left {
-  animation: curtain-into-close-left 2s ease-in-out forwards;
-  will-change: transform;
-}
-
 @keyframes curtain-into-right {
   from {
     transform: translateX(0);
@@ -57,27 +47,5 @@
   to {
     transform: translateX(-110%);
     display: none;
-  }
-}
-
-@keyframes curtain-into-close-left {
-  from {
-    display: block;
-    transform: translateX(-110%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes curtain-into-close-right {
-  from {
-    display: block;
-    transform: translateX(110%);
-  }
-
-  to {
-    transform: translateX(0);
   }
 }
