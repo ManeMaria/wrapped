@@ -4,17 +4,17 @@ type LocalProps = {
 }
 export const Local = ({ children }: LocalProps) => {
   return (
-    <div className="relative w-full grid items-end">
+    <div className="relative w-full h-dvh grid">
       <span className={'w-full'}>
         <img
           loading="lazy"
           src="/assets/images/top.png"
           alt="top"
-          className="object-cover h-[145px] w-full"
+          className="object-cover h-[155px] w-full"
         />
       </span>
       <span className="h-[60dvh] grid place-items-center">{children}</span>
-      <span className="w-full">
+      <span className="w-full mt-auto">
         <img
           loading="lazy"
           src="/assets/images/base.png"
