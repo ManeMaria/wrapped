@@ -9,16 +9,12 @@
   z-index: 3;
   position: absolute;
   inset: 0;
-  background: url('/assets/images/curtain-l.png') no-repeat center right;
-  background-size: cover;
 }
 
 .curtain-effect-right {
   z-index: 3;
   position: absolute;
   inset: 0;
-  background: url('/assets/images/curtain-r.png') no-repeat center left;
-  background-size: cover;
 }
 
 .animated-open-right {
