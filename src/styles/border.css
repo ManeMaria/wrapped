@@ -2,7 +2,7 @@
   position: relative;
   --border-size-left-right: 11px;
   --border-size-top-bottom: 25px;
-  --scroll-speed: 7.5s;
+  --scroll-speed: 30.5s;
 }
 
 .border-effect-top {
@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: var(--border-size-top-bottom);
-  background: url('/assets/images/bordasuperior.png');
+  background: url('/assets/images/bordasuperior.webp');
   background-size: cover;
   animation: border-scroll-top var(--scroll-speed) linear infinite;
 }
@@ -24,7 +24,7 @@
   left: 0;
   width: 100%;
   height: var(--border-size-top-bottom);
-  background: url('/assets/images/bordainferior.png');
+  background: url('/assets/images/bordainferior.webp');
   background-size: cover;
   animation: border-scroll-bottom var(--scroll-speed) linear infinite;
 }
@@ -36,7 +36,7 @@
   left: 0;
   width: var(--border-size-left-right);
   height: 100dvh;
-  background: url('/assets/images/border-side.svg') 20px round repeat;
+  background: url('/assets/images/border-side.webp') 20px round repeat;
   animation: border-scroll-left var(--scroll-speed) linear infinite;
 }
 
@@ -46,7 +46,7 @@
   right: 0;
   width: var(--border-size-left-right);
   height: 100dvh;
-  background: url('/assets/images/border-side.svg') 20px round repeat;
+  background: url('/assets/images/border-side.webp') 20px round repeat;
   animation: border-scroll-right var(--scroll-speed) linear infinite;
 }
 
