@@ -28,7 +28,7 @@ export const Curtain = ({ children, isVisible = false }: CurtainProps) => {
       <span
         className={cn(
           'curtain-effect-left w-full h-full',
-          isVisible ? 'animated-open-left' : 'animated-close-left',
+          isVisible && 'animated-open-left',
         )}
       >
         <CurtainImage src="/assets/images/curtain-l.webp" alt="curtain-left" />
@@ -37,7 +37,7 @@ export const Curtain = ({ children, isVisible = false }: CurtainProps) => {
       <span
         className={cn(
           'curtain-effect-right',
-          isVisible ? 'animated-open-right' : 'animated-close-right',
+          isVisible && 'animated-open-right',
         )}
       >
         <CurtainImage src="/assets/images/curtain-r.webp" alt="curtain-right" />
