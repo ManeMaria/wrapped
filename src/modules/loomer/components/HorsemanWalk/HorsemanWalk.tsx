@@ -5,7 +5,7 @@ type HorsemanWalkProps = {
 }
 export const HorsemanWalk = ({ isVisible }: HorsemanWalkProps) => {
   return (
-    <div className="relative w-full h-[50dvh] pl-[30px] grid items-end">
+    <div className="relative w-full h-[43dvh] pl-[30px] grid items-end ">
       <span className={cn(isVisible && 'horseman-walk')}>
         <img
           loading="lazy"
@@ -15,7 +15,7 @@ export const HorsemanWalk = ({ isVisible }: HorsemanWalkProps) => {
         />
       </span>
 
-      <span className="w-[50%] max-w-[300px] h-[30dvh]">
+      <span className="w-[50%] max-w-[300px] h-[25dvh]">
         <img
           loading="lazy"
           src="/assets/images/flowers.png"
