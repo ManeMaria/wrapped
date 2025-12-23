@@ -87,12 +87,18 @@
   animation: fadeOut 2s 5s ease-in forwards;
 }
 
+.animation_delay-8s {
+  animation: fadeOut 1s 8s ease-in-out forwards;
+}
+
 .animation_delay-9s {
   animation: fadeOut 1s 9s ease-in-out forwards;
 }
 
+
 @keyframes fadeOut {
   0% {
+    transition: opacity 1s ease-in-out;
     opacity: 1;
   }
 

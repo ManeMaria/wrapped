@@ -261,7 +261,7 @@ export const UserPage = () => {
                 <Card>
                   {(isCentered) => (
                     <div>
-                      <div className="w-full px-6 pt-10 h-full grid">
+                      <div className="w-full px-6 pt-10 h-full grid transition-all">
                         <div
                           className={cn(
                             'text-[28px]',
@@ -288,13 +288,13 @@ export const UserPage = () => {
                         <div
                           className={cn(
                             'text-[28px]',
-                            isCentered && 'animation_delay-5s',
+                            isCentered && 'animation_delay-8s',
                           )}
                         >
                           <div
                             className={cn(
                               'typing-effect',
-                              isCentered && 'typing-animated delay-2-5s',
+                              isCentered && 'typing-animated delay-4-5s',
                             )}
                           >
                             Com entrega e muito
@@ -302,7 +302,7 @@ export const UserPage = () => {
                           <div
                             className={cn(
                               'typing-effect',
-                              isCentered && 'typing-animated delay-3s',
+                              isCentered && 'typing-animated delay-5s',
                             )}
                           >
                             amor
@@ -312,7 +312,7 @@ export const UserPage = () => {
                           <div
                             className={cn(
                               'typing-effect',
-                              isCentered && 'typing-animated delay-3-5s',
+                              isCentered && 'typing-animated delay-8-5s',
                             )}
                           >
                             Exemplo de
@@ -320,7 +320,7 @@ export const UserPage = () => {
                           <div
                             className={cn(
                               'typing-effect',
-                              isCentered && 'typing-animated delay-4s',
+                              isCentered && 'typing-animated delay-9s',
                             )}
                           >
                             {user?.loomiValue}
@@ -328,7 +328,7 @@ export const UserPage = () => {
                           <div
                             className={cn(
                               'typing-effect',
-                              isCentered && 'typing-animated delay-4-5s',
+                              isCentered && 'typing-animated delay-10s',
                             )}
                           >
                             Onde passa, deixa flor
